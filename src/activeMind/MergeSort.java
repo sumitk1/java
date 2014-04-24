@@ -1,7 +1,22 @@
 package activeMind;
 
+/**
+ * Class for merging two sorted arrays
+ * 
+ * @author sumit
+ *
+ */
 public class MergeSort {
 
+	/**
+	 * This function takes in two arrays and merge them together in sorted order.
+	 * The assumption is that both the arrays are sorted
+	 * 
+	 * @param arrayA - a sorted array if integers
+	 * @param arrayB - a sorted array if integers
+	 * 
+	 * @return
+	 */
 	public int[] merge(int[] arrayA, int[] arrayB) {
 
 		 if (arrayA != null && arrayB != null){
