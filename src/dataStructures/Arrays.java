@@ -27,7 +27,7 @@ public class Arrays {
 		
 	public static void main(String[] args) {
 		
-		int[] input= {-1, -11, -14, -13, -5, -2};
+		int[] input= {-1, 11, -1, 13, -5, -2};
 		
 		Arrays obj = new Arrays();
 		int ret = obj.maxSum(input);
