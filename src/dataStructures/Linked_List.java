@@ -23,12 +23,12 @@ public class Linked_List {
 		Iterator<String> ListIterator = ls.iterator();
 		//ListIterator lt = ls.listIterator();
 		
-/*		for(ListIterator<String> i = ls.listIterator(); i.hasNext(); ) {
+		for(ListIterator<String> i = ls.listIterator(); i.hasNext(); ) {
 			  String item = i.next();
 			  if(item.equals("f"))
 				  i.add("xxxx");
 			  System.out.print(" # "+item);
-			}*/
+			}
 		
 		HashSet<String> hs = new HashSet<String>();
 		while(ListIterator.hasNext()){
