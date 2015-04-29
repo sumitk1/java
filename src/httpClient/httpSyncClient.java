@@ -27,8 +27,8 @@ public class httpSyncClient {
                     .type("application/json")
                     .post(ClientResponse.class, payload);
 
+            // This is blocking call and will wait for the response
             if (response.getStatus() != 200) {
-                // Is this blocking?
                 System.out.println("The endpoint [" + getBaseURI(endpoint) + "] returned a non 200 status code [" + response.getStatus() + "] ");
             }
             System.out.println(response);

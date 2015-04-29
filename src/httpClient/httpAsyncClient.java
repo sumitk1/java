@@ -17,8 +17,6 @@ public class httpAsyncClient {
     public static void call(String endpoint, String payload) {
 
         try {
-            //final AsyncInvoker asyncInvoker = target().path("http://example.com/resource/")
-            //        .request().async();
 
             ClientConfig config = new DefaultClientConfig();
             Client client = Client.create(config);
@@ -30,13 +28,14 @@ public class httpAsyncClient {
                     .type("application/json")
                     .post(ClientResponse.class, payload);
 
+            // The call below makes it blocking
+            /*
             ClientResponse response = resp.get();
-            //System.out.println(resp.get());
 
             if (response.getStatus() != 200) {
-                // Is this blocking?
                 System.out.println("The  [" + getBaseURI(endpoint) + "] returned a non 200 status code [" + response.getStatus() + "] ");
             }
+            */
             System.out.println(response);
         } catch (Exception e) {
             // Do something meaningful
