@@ -9,7 +9,7 @@ import java.net.URL;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class SimpleHttpSyncPost{
+public class SimpleHttpSync{
 
     public static void main(String [] args) {
         SimpleHttpSyncPost http = new SimpleHttpSyncPost();
@@ -33,10 +33,12 @@ public class SimpleHttpSyncPost{
         URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
-        //add reuqest header
+        //add request header
         con.setRequestMethod("POST");
         //con.setRequestProperty("User-Agent", USER_AGENT);
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
+        con.setConnectTimeout(5000); // fastcgi_finish_request();
+        con.setReadTimeout(10000);
 
         String urlParameters = "{\"id\":837686871,\"funcname\":\"SeoV2\",\"args\":null,\"source\":null,\"product\":null}";
         //String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
