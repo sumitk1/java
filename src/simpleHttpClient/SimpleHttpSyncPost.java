@@ -14,9 +14,13 @@ public class SimpleHttpSyncPost{
     public static void main(String [] args) {
         SimpleHttpSyncPost http = new SimpleHttpSyncPost();
 
-        System.out.println("\nTesting 2 - Send Http POST request");
         try {
+            System.out.println("Testing - Send Http POST request");
             http.sendPost();
+
+            System.out.println("\nTesting - Send Http GET request");
+            http.sendGet();
+
         } catch (Exception e) {
             System.out.println("Exception = " + e.getMessage());
         }
@@ -34,7 +38,7 @@ public class SimpleHttpSyncPost{
         //con.setRequestProperty("User-Agent", USER_AGENT);
         con.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 
-        String urlParameters = "{\"id\":837686871,\"funcname\":\"BenchmarkWorker\",\"args\":null,\"source\":null,\"product\":null}";
+        String urlParameters = "{\"id\":837686871,\"funcname\":\"SeoV2\",\"args\":null,\"source\":null,\"product\":null}";
         //String urlParameters = "sn=C02G8416DRJM&cn=&locale=&caller=&num=12345";
 
         // Send post request
@@ -59,7 +63,40 @@ public class SimpleHttpSyncPost{
         in.close();
 
         //print result
-        System.out.println(response.toString());
+        System.out.println("----- " + response.toString());
+    }
+
+    // HTTP GET request
+    private void sendGet() throws Exception {
+
+        String url = "http://www.google.com/search?q=sumitk.85";
+
+        URL obj = new URL(url);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+        // optional default is GET
+        con.setRequestMethod("GET");
+
+        //add request header
+        String USER_AGENT = "Mozilla/5.0";
+        con.setRequestProperty("User-Agent", USER_AGENT);
+
+        int responseCode = con.getResponseCode();
+        System.out.println("\nSending 'GET' request to URL : " + url);
+        System.out.println("Response Code : " + responseCode);
+
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuffer response = new StringBuffer();
+
+        while ((inputLine = in.readLine()) != null) {
+            response.append(inputLine);
+        }
+        in.close();
+
+        //print result
+        System.out.println("----- " + response.toString());
 
     }
 }
