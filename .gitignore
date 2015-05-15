@@ -29,3 +29,5 @@ dependency-reduced-pom.xml
 out
 README.html
 
+*.class
+
