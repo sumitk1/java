@@ -12,7 +12,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class SimpleHttpSync{
 
     public static void main(String [] args) {
-        SimpleHttpSyncPost http = new SimpleHttpSyncPost();
+        SimpleHttpSync http = new SimpleHttpSync();
 
         try {
             System.out.println("Testing - Send Http POST request");
