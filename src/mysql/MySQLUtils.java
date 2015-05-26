@@ -16,7 +16,7 @@ public class MySQLUtils {
     private ResultSet resultSet = null;
 
     public MySQLUtils(){
-        connectDB("root", "passwd" , "08geolookup", "localhost");
+        connectDB("root", "nwN9vrsbzl@vdc4f" , "08geolookup", "localhost");
     }
 
     public void connectDB(String userName, String passwd, String dbName, String host){
@@ -24,6 +24,8 @@ public class MySQLUtils {
         Class.forName("com.mysql.jdbc.Driver");
 
         // Setup the connection with the DB
+        //String dbUser = "root";
+        //String dbPass = "nwN9vrsbzl@vdc4f";
         connect = DriverManager.getConnection("jdbc:mysql://" + host + "/" + dbName + "?user=" + userName + "&password=" + passwd);
     }
 
