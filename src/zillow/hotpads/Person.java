@@ -21,6 +21,16 @@ public class Person {
     }
 
     @Override
+    public int hashCode() {
+        // get unique code
+    }
+
+    @Override
+    public boolean equals() {
+        // compare 2 person objects
+    }
+
+    @Override
     public String toString(){
         return  "SSN - " + this.getSsn() +
                 ", DOB - " + this.getDateOfBirth() +
