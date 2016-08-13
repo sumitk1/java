@@ -40,5 +40,13 @@ System.out.printf("%d x %d = %d\n", N, i, N*i);
     String zeroTo255 = "(\\d{1,2}|(0|1)\\d{2}|2[0-4]\\d|25[0-5])";
     str.matches(patternStr);
     
-    
+    char [] arr = new char[10]; // all chars are \0
+    new String(new char[10]).replace("\0, "#");
+```
+
+#### Matrix
+```
+Matrix other diag - if(r+c == n+1) // r,c starts from 1, n is sq matrix size
+Spiral matrix = bounds
+
 ```
