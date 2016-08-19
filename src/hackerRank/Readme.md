@@ -42,6 +42,8 @@ System.out.printf("%d x %d = %d\n", N, i, N*i);
     
     char [] arr = new char[10]; // all chars are \0
     new String(new char[10]).replace("\0, "#");
+    
+    ArrayList<Integer> arrayList = new ArrayList<Integer>(Arrays.asList(array)); 
 ```
 
 #### Matrix
@@ -49,4 +51,8 @@ System.out.printf("%d x %d = %d\n", N, i, N*i);
 Matrix other diag - if(r+c == n+1) // r,c starts from 1, n is sq matrix size
 Spiral matrix = bounds
 
+
+
 ```
+
+9202394653090520043354
